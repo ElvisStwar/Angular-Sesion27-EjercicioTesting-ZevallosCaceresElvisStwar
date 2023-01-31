@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './components/calculadora/calculadora.component';
@@ -12,7 +12,8 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
         FormsModule,
-        ComponentsModule
+        ComponentsModule,
+        ReactiveFormsModule
       ],
       declarations: [
         AppComponent,
