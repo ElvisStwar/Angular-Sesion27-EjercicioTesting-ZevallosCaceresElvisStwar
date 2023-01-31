@@ -7,20 +7,20 @@ import { Component } from '@angular/core';
 })
 export class CalculadoraComponent {
 
-  num1:number=0;
-  num2:number=0;
-  res:number=0;
+  num1=0;
+  num2=0;
+  res=0;
 
-    suma(){
-      this.res=this.num1+this.num2
+    suma(valor1:number,valor2:number):number{
+      return this.res = valor1 + valor2;
     }
 
-    resta(){
-      this.res=this.num1-this.num2
+    resta(valor1:number,valor2:number):number{
+      return this.res=valor1-valor2
     }
 
-    multi(){
-      this.res=this.num1*this.num2
+    multi(valor1:number,valor2:number):number{
+      return this.res=valor1*valor2
     }
 
 }
