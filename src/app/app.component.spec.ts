@@ -1,15 +1,23 @@
 import { TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { CalculadoraComponent } from './components/calculadora/calculadora.component';
+import { ComponentsModule } from './components/components.module';
+import { HeaderComponent } from './components/header/header.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        FormsModule,
+        ComponentsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        CalculadoraComponent,
+        HeaderComponent
       ],
     }).compileComponents();
   });
@@ -30,6 +38,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('testing app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('testing');
   });
 });
