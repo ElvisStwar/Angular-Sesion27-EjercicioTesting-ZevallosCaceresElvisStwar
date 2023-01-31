@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CalculadoraComponent {
 
-  num1!:number
-  num2!:number
+  num1:number=0;
+  num2:number=0;
   res:number=0;
 
     suma(){
